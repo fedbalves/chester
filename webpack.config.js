@@ -7,7 +7,7 @@ const GitRevisionPlugin = require('git-revision-webpack-plugin');
 const gitRevisionPlugin = new GitRevisionPlugin({ branch: true });
 
 module.exports = (env) => ({
-  entry: ['@babel/polyfill', './src/index.tsx'],
+  entry: './src/index.tsx',
 
   output: {
     filename: '[git-revision-BRANCH]-[git-revision-VERSION].js',
@@ -31,17 +31,9 @@ module.exports = (env) => ({
   module: {
     rules: [
       {
-        test: /\.(ts)x?$/,
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
-        test: /\.(otf)$/,
-        use: {
-          loader: 'url-loader',
-        },
       },
     ],
   },
