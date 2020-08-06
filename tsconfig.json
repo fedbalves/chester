@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "strict": true,
+    "outDir": "./build",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "lib": ["es2017", "esnext", "DOM"],
+    "importHelpers": true,
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "jsx": "react"
+  }
+}

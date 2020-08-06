@@ -1,0 +1,3 @@
+"hooks": {
+  "pre-push": "yarn audit-dependencies && yarn lint && yarn test && yarn build"
+}
