@@ -54,7 +54,7 @@ module.exports = (env) => ({
     }),
 
     new HtmlWebpackPlugin({
-      title: 'FanáticoFC',
+      title: 'Layout Test',
       template: './public/index.html',
       filename: 'index.html',
     }),
